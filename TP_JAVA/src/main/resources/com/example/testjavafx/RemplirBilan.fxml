@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="remplirBillanScene" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.testjavafx.RemplirBilan">
+   <children>
+      <AnchorPane fx:id="anaScene" layoutX="30.0" layoutY="147.0" prefHeight="524.0" prefWidth="741.0" style="-fx-background-color: #000000;">
+         <children>
+            <TableView fx:id="anamnesetab" layoutX="14.0" layoutY="31.0" prefHeight="361.0" prefWidth="688.0">
+               <columns>
+                  <TableColumn fx:id="enonce" prefWidth="524.6666679382324" text="Enoncé" />
+                  <TableColumn fx:id="type" minWidth="0.0" prefWidth="162.6666259765625" text="Type Anamnese" />
+               </columns>
+            </TableView>
+            <Label layoutX="53.0" layoutY="438.0" text="Cliquer sur une question Anamnese pour entrer la reponce " textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="newrep" layoutX="45.0" layoutY="484.0" prefHeight="25.0" prefWidth="368.0" />
+            <Button layoutX="558.0" layoutY="448.0" mnemonicParsing="false" onAction="#onValideranaClick" prefHeight="37.0" prefWidth="143.0" style="-fx-background-color: #ccdddd;" text="Valider">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="45.0" prefWidth="800.0" style="-fx-background-color: #008080;">
+         <children>
+            <Label fx:id="ortho" layoutX="27.0" layoutY="9.0" prefHeight="27.0" prefWidth="136.0" text="Remplir le Bilan" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="anabutton" layoutX="48.0" layoutY="82.0" mnemonicParsing="false" onAction="#onAnamneseClick" prefHeight="37.0" prefWidth="124.0" style="-fx-background-color: #008080;" text="Anamneses" textFill="#ccdddd">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="210.0" layoutY="82.0" mnemonicParsing="false" onAction="#onTestClick" prefHeight="37.0" prefWidth="124.0" style="-fx-background-color: #008080;" text="Test" textFill="#ccdddd">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="testScene" layoutX="37.0" layoutY="133.0" prefHeight="551.0" prefWidth="749.0" visible="false">
+         <children>
+            <TreeTableView fx:id="treeTableViewques" layoutX="14.0" layoutY="14.0" prefHeight="371.0" prefWidth="347.0">
+               <columns>
+                  <TreeTableColumn fx:id="nomColumn" prefWidth="216.66666793823242" text="Test Question" />
+                  <TreeTableColumn fx:id="typeColumn" prefWidth="65.33334350585938" text="Type " />
+                  <TreeTableColumn fx:id="capaciteColumn" minWidth="8.66668701171875" prefWidth="64.66665649414062" text="Capacité" />
+               </columns>
+            </TreeTableView>
+            <TreeTableView fx:id="treeTableViewexo" layoutX="400.0" layoutY="14.0" prefHeight="371.0" prefWidth="337.0">
+               <columns>
+                  <TreeTableColumn fx:id="nomColumn2" prefWidth="201.99996948242188" text="Test Exercice" />
+                  <TreeTableColumn fx:id="typeColumn2" prefWidth="68.66668701171875" text="Type " />
+                  <TreeTableColumn fx:id="capaciteColumn2" minWidth="8.66668701171875" prefWidth="66.0" text="Capacité" />
+               </columns>
+            </TreeTableView>
+            <Label fx:id="labelqueslibre" layoutX="84.0" layoutY="439.0" text="Entrez votre reponce ici " textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="repquestlibre" layoutX="84.0" layoutY="479.0" prefHeight="25.0" prefWidth="171.0" promptText="Reponce Question libre " />
+            <Label fx:id="labelexo" layoutX="512.0" layoutY="439.0" text="Entrez votre score ici " textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="scoreexo" layoutX="520.0" layoutY="479.0" prefHeight="25.0" prefWidth="143.0" promptText="Score Exercice / Q libre" />
+            <Button layoutX="342.0" layoutY="473.0" mnemonicParsing="false" onAction="#onValiderTestClick" prefHeight="37.0" prefWidth="84.0" style="-fx-background-color: #ccdddd;" text="Valider">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label fx:id="enonceoutside" layoutX="370.0" layoutY="413.0" text="enonce" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="traitementScene" layoutX="43.0" layoutY="140.0" prefHeight="541.0" prefWidth="725.0" visible="false">
+         <children>
+            <Label layoutX="55.0" layoutY="61.0" text="Diagnostique" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="61.0" layoutY="149.0" text="Observation" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="43.0" layoutY="239.0" text="Projet Thérapeutique" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="observation" layoutX="204.0" layoutY="156.0" prefHeight="57.0" prefWidth="485.0" />
+            <TextArea fx:id="prjthera" layoutX="260.0" layoutY="241.0" prefHeight="57.0" prefWidth="430.0" />
+            <Label layoutX="239.0" layoutY="35.0" text="Nom" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nomtrouble" layoutX="337.0" layoutY="37.0" />
+            <Label layoutX="228.0" layoutY="93.0" text="Trouble" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="troubleBox" layoutX="337.0" layoutY="94.0" prefWidth="150.0" />
+            <AnchorPane id="decisionpane" fx:id="decisionpane" layoutX="20.0" layoutY="363.0" prefHeight="88.0" prefWidth="521.0" visible="false">
+               <children>
+                  <Label layoutX="14.0" layoutY="41.0" text="Patient pris en charge ? " textFill="WHITE">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="oui" layoutX="290.0" layoutY="41.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="78.0" text="Oui" textFill="WHITE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="non" layoutX="432.0" layoutY="43.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="78.0" text="Non" textFill="WHITE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </CheckBox>
+               </children>
+            </AnchorPane>
+            <Button layoutX="594.0" layoutY="407.0" mnemonicParsing="false" onAction="#onValiderTraitClick" prefHeight="37.0" prefWidth="95.0" style="-fx-background-color: #008080;" text="Valider" textFill="#ccdddd">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label fx:id="nonremplit" layoutX="457.0" layoutY="472.0" textFill="#ccdddd" />
+            <AnchorPane fx:id="objectifspane" layoutX="43.0" layoutY="319.0" prefHeight="200.0" prefWidth="521.0">
+               <children>
+                  <ListView fx:id="objlistview" layoutX="24.0" layoutY="11.0" prefHeight="178.0" prefWidth="309.0" />
+                  <Label layoutX="421.0" layoutY="41.0" text="Note" textFill="WHITE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="noteobj" layoutX="409.0" layoutY="100.0" prefHeight="25.0" prefWidth="65.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Button layoutX="378.0" layoutY="82.0" mnemonicParsing="false" onAction="#onTraitementClick" prefHeight="37.0" prefWidth="124.0" style="-fx-background-color: #008080;" text="Remarques" textFill="#ccdddd">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="634.0" layoutY="63.0" mnemonicParsing="false" onAction="#onRetourClick" prefHeight="37.0" prefWidth="143.0" style="-fx-background-color: #ccdddd;" text="Retour">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

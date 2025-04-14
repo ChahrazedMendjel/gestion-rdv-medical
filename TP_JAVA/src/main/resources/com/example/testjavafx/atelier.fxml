@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="atelierpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.testjavafx.AtelierController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: #000000;">
+         <top>
+            <AnchorPane prefHeight="45.0" prefWidth="600.0" style="-fx-background-color: #008080;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="62.0" layoutY="14.0" prefHeight="17.0" prefWidth="236.0" text="Planifier un atelier" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="57.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+      <AnchorPane layoutX="24.0" layoutY="76.0" prefHeight="557.0" prefWidth="713.0">
+         <children>
+            <TableView fx:id="tabledossier" editable="true" layoutX="118.0" layoutY="134.0" onMouseClicked="#here" prefHeight="319.0" prefWidth="515.0" style="-fx-background-color: #7F7F7F;">
+               <columns>
+                  <TableColumn fx:id="nom" prefWidth="120.66665649414062" text="Nom" />
+                  <TableColumn fx:id="prenom" prefWidth="125.99993896484375" text="Prénom" />
+                  <TableColumn fx:id="numero" prefWidth="120.66665649414062" text="Numéro" />
+                  <TableColumn fx:id="checkColumn" prefWidth="120.66665649414062" text="Selecté" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Label layoutX="73.0" layoutY="56.0" prefHeight="43.0" prefWidth="389.0" text="Veuillez choisir les patients consérnés" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="thematique" layoutX="281.0" layoutY="27.0" prefHeight="33.0" prefWidth="180.0" promptText="thématique" />
+            <Button fx:id="Valider" layoutX="331.0" layoutY="475.0" mnemonicParsing="false" onAction="#Validate" prefHeight="47.0" prefWidth="79.0" style="-fx-background-color: #008080;" text="Valider" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="valider1" layoutX="657.0" mnemonicParsing="false" onAction="#Onretourclick" prefHeight="35.0" prefWidth="85.0" style="-fx-background-color: #ccdddd;" text="Retour" />
+            <Label fx:id="label" layoutX="73.0" prefHeight="27.0" prefWidth="457.0" text="Veuillez choisir la thématique de l'atelier" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

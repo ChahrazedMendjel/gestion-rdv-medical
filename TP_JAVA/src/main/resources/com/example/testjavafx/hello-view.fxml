@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="scenecreer" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="400.0" minWidth="520.0" prefHeight="680.0" prefWidth="800.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.testjavafx.HelloController">
+   <children>
+      <AnchorPane layoutY="-4.0" prefHeight="44.0" prefWidth="800.0" style="-fx-background-color: #008080;" />
+      <AnchorPane layoutX="178.0" layoutY="114.0" prefHeight="404.0" prefWidth="582.0">
+         <children>
+            <Label layoutX="70.0" layoutY="26.0" prefHeight="34.0" prefWidth="78.0" text="Nom" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nom_orth" layoutX="218.0" layoutY="30.0" prefHeight="32.0" prefWidth="156.0" promptText="nom" />
+            <TextField fx:id="prenom_orth" layoutX="218.0" layoutY="71.0" prefHeight="32.0" prefWidth="156.0" promptText="prenom" />
+            <TextField fx:id="adr_orth" layoutX="218.0" layoutY="113.0" prefHeight="32.0" prefWidth="156.0" promptText="adresse" />
+            <Label layoutX="70.0" layoutY="67.0" prefHeight="34.0" prefWidth="101.0" text="Prenom" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="73.0" layoutY="113.0" prefHeight="25.0" prefWidth="95.0" text="Adresse" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="73.0" layoutY="160.0" text="AdresseMail" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="mail_orth" layoutX="218.0" layoutY="157.0" prefHeight="32.0" prefWidth="156.0" promptText="adressemail" />
+            <TextField fx:id="numtele_orth" layoutX="218.0" layoutY="200.0" prefHeight="32.0" prefWidth="156.0" promptText="numéro téléphone" />
+            <Label layoutX="73.0" layoutY="200.0" text="Numéro Téléphone" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="73.0" layoutY="243.0" text="Mot de passe" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="motpasse_orth" layoutX="218.0" layoutY="240.0" prefHeight="32.0" prefWidth="156.0" promptText="mot de passe" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="320.0" layoutY="518.0" onAction="#onHelloButtonClick" style="-fx-background-color: #008080;" text="Créer compte">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="welcomeText" layoutX="131.0" layoutY="40.0" prefHeight="17.0" prefWidth="5.0" />
+      <Label fx:id="emptyelement" layoutX="108.0" layoutY="76.0" textFill="#ccdddd">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

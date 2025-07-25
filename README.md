@@ -28,3 +28,5 @@ DoctorLite is a lightweight desktop application developed in **Java** to help do
    ```bash
    git clone https://github.com/your-username/doctorlite.git
    cd doctorlite
+Done by :
+Bouderbala Amira & Mendjel Chahrazed
